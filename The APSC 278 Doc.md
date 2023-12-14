@@ -1,0 +1,547 @@
+---
+sr-due: 2023-12-05
+sr-interval: 1
+sr-ease: 130
+---
+This is intended as a companion/summary of the lecture slides, no images means you need to look them up appropriately. Any mistakes are my own.
+### Chemical bonding
+- Inter-atomic bonding is governed by electron structure
+- More electronegative atoms (upper-right of periodic table) accept electrons more easily
+- Primary bonds are strong
+	- Ionic
+		- Between metals and non-metals
+		- Metals give atoms up to non-metals
+		- Bond is *non-directional*
+		- Bond energies high (600-1500 kJ/mol)
+	- Covalent
+		- Between atoms with small differences in electronegativity
+		- Sharing of valence electrons
+		- Bond is *directional*
+		- Bond energies vary
+	- Metallic
+		- Metal atoms give up valence electron $\to$ sea of electrons
+		- Electron cloud is conductive
+		- Bond id *non-directional*
+		- Bond energies vary
+- Secondary bonds are generally weaker
+	- Van der Waals bonds
+		- Between *most* atoms and molecules
+		- Random fluctuations in polarization
+		- Very weak
+	- Hydrogen bonds 
+		- Strongest secondary bond
+		- Between H and O, N, F(luorine)
+		- Due to asymmetric charge distribution
+- Polymers have covalent bonds
+- Ceramics usually have ionic and covalent bonds
+- Bond energies can only be compared between a bond type (i.e., $T_{m}\propto U_{bond}$ amongst a specific bond type)
+### Elastic properties
+- Elastic deformation is *non-permanent* and *reversible*
+- Linear relationship between force and *elastic* deformation
+	- Young’s Modulus $E$ is the slope
+	- $\sigma = E\varepsilon$
+	- Units (this gets asked for some reason)
+		- $E [\ce{ Pa }]\equiv [\ce{N/m^{2}}]\equiv [\ce{ kg/ms^{2}] }\equiv [\ce{ J/m^{3} }]$
+		- Strain is unit-less
+- $E$ describes *stiffness*
+- Resilience is the *recoverable* energy from elastic deformation
+- **Modulus of Resilience**: Elastic area under stress-strain curve
+	- Same units as $E$
+	- $MOR=E\varepsilon _{y}^{2}/2=\sigma _{y}^{2}/2E$
+- MOR increases with $\sigma _{Y}$ or decreased $E$
+- Uniaxial tensile test
+	- Measures $E$, $\sigma _{Y}$ and $\sigma _{\mathrm{UTS}}$
+- True parameters use *instantaneous* measurements (that is, at location of deformation)
+- Poisson’s Ration ($\nu$): Strain perpendicular to load
+- Equilibrium interatomic distance: where $F(r_{0}) = dU/dr = 0$, useful for material properties because $E\propto dF/dr\vert_{r_{0}}$ 
+	- Bond stiffness
+- $E\propto T_{m}$
+### Plastic properties
+- Plastic deformation is *permanent*
+- Beyond $\sigma _{Y}$
+	- Heterogeneous: abrupt transition with upper and lower yield-point
+		- Lueder’s bands: points of localized deformation deform plastically first
+		- Happen because of pinned dislocations by composite atoms (carbon and steel, etc)
+	- Homogeneous: Continuous undistinguishable point
+		- Offset yield stress method to determine $\sigma _{Y}$
+		- Shift strain by $0.002$ (convention) and plot linearly with slope $E$, intercept is $\sigma _{Y}$
+- Definition: *work hardening* $\to$ increasing $\sigma _{Y}$ (i.e., extending the elastic limit)
+- Maximum stress in stress-strain curve: $\sigma _{UTS}$
+- Elastic deformation keeps happening even after elastic limit
+	- Recoverable energy (area) approximated by slope ($E$) into intercept
+- True stress up to necking: $\sigma _{T}=K\varepsilon _{T}^{n}$
+	- $K$: strength coefficient
+	- $n$: work hardening exponent
+	- This is the work hardening equation $\to$ *true stress* (more below) up to necking point
+- At $\sigma _{UTS}$ - *necking* process begins
+	- Caused by pore cavities (defects)
+	- Pores increase $\to$ reduced load $\to$ localized deformation $\to$ eventual failure
+- IMPORTANT DEFINITIONS
+	- *Ductility:* 
+		- Amount of deformation before failure (expressed in % elongation or % reduction in area)
+	- *Toughness:* 
+		- Energy *absorbed* before $\sigma _{f}$, area under graph
+		- Approximation: $\approx \frac{\sigma _{Y}+\sigma _{UTS}}{2}\varepsilon _{f}$
+	- *Hardness:* 
+		- resistance to *localized* plastic deformation
+- Carbon composition in steel: Higher = more brittle, less tough, stronger (and vice versa)
+- True stress and true strain:
+	- Use *instantaneous* measurements (at time and local of deformation) as opposed to original ones
+	- Just look at formula sheet equations
+	- Both engineering quantities are *less* than their true counterparts $\to$ *conservative* estimates
+- Safety factors: Factor of safety $N = \sigma _{Y}/\sigma _{w}$ where $\sigma _{w}$ is the *working stress* 
+	- Ratio of yield stress to stress applied $\to$ high means stress applied much lower than yield = safe
+- Hoop stress: $\sigma = \frac{r\Delta p}{t}$
+- Hardness testing
+	- Can’t be determined from tensile test
+	- Values are relative, not absolute $\to$ depend on testing standards used (Rockwell, Brinell)
+- Hardness is useful to estimate $\sigma _{Y}$
+### Crystal structure
+
+*** 
+### Recrystallization and grain growth
+- Hot vs. cold working
+	- Define *homologous temperature* as $T_{H} + \frac{T_{deform}}{T_{melt}}$
+	- For pure metals, if $T_{H} < 0.4$ we get cold working, else it’s hot working
+	- For alloys, that number is $0.6$. 
+		- This is higher for alloys because solutes strengthen it by inducing strain in the crystal structure $\to$ impeding dislocation $\to$ higher energy required to relieve strain
+	- **How to determine:** 
+		- Given a temperature $T$ and a melting point $\widetilde{T}$, first determine wether alloy or metal, then calculate homologous temperature by: $T_{H} = \frac{T}{T + \widetilde{T}}$ and compare to see if its cold or hot working.
+- Lattice strain and dislocation motion:
+	- Given a *substitutional atom* we have two types of interaction:
+		- Alloy atoms move (diffuse) to dislocation to reduce strain imposed by it, energy required (for diffusion from low strain)
+		- Strain field interactions (**repulsive** in cold working) in adjacent dislocations
+- Rolling and extrusion:
+	- Process of *work hardening* (at cold working) by rolling and extruding a metal, with decrease in ductility
+	- What happens to the grains?
+		- increased dislocation number and density $\implies$ strain in crystal lattice (above)
+		- This means dislocation motion is more difficult $\equiv$ stronger
+- Annealing heat treatment 
+	- Reverses effects of work hardening (see above)
+	- The internal energy from work hardening is in energy per unit length of dislocation times dislocation density ($\frac{U}{L} \times \rho$) (meaningless formula)
+	- Three stages
+		- Recovery:
+			- Release of stored energy by dislocation motion from *enhanced* atomic diffusion (?)
+			- Dislocations go to lower strain energy
+		- Recrystallization:
+			- Is driven by *internal energy of material* **IMPORTANT** 
+			- Dislocation free grains nucleate at grain boundaries, these are softer (lower $\sigma_{Y}$) because:
+				- Lower dislocation density
+			- New grains are balls basically
+			- *Recrystallization temperature:* inversely proportional to cold work, temp. at which recrx. takes $\sim$ one hour.
+			- [!] **EXPLAIN SLIDE 17 AND 26**
+			- Material is unstable $\to$ wants to go to lower state
+			- Thermally activated: $t_{recrx} \propto \frac{1}{Ae^{-Q/RT}}$ (time for 100% recrystallized)
+				- This $Q$ (act. energy) decreases with cold work $\implies$ recrx. rate increases with cold work 
+		- Grain growth: 
+			- Boundaries have high disorder = high energy
+			- After recrx. grains boundaries are *reduced*
+			- Follows equation: $d^{n}-d_{0}^{n}= Kt$ 
+				- $K,n$ constants
+				- $d$ is grain size ($d_{0}$ init.)
+				- $t$ is time
+- WE DID IT
+### Fracture
+- Comparison to ductile fracture
+	- Happens to *brittle* materials $\implies$ low toughness, little plastic deformation
+	- Fracture surface is shiny and crystalline 
+	- More *macroscopic* evidence (lack of dimples) resulting from *cleavage* (lol) of grains, translates into chevron and fan patterns under shear loading
+- Brittle fracture process
+	1. Necking 
+	2. Cavities enlarge
+	3. Cavities combine to form a *crack*
+	4. Crack propagates
+	5. Finally, when stress can’t be sustained, fracture
+- All materials contain defects
+	- Notably dislocations
+	- Porosity, inclusions, surface damage etc.
+- Fracture toughness $K_{C}$
+	- Measures material’s resistance to brittle fracture when a crack is present (material property)
+	- defined by $Y \sigma_{c} \sqrt{ \pi a }$ (same critical stress as Griffith’s)
+	- Different $K_{C}$ depending on loading:
+		- Plane strain (“spreading the crack apart”) is most common, no residual strain in back and front faces
+			- $K_{I}$ intensity factor at some $\sigma < \sigma_{c}$ can determine crack propagation
+		- Others are *sliding* and *tearing*. 
+	- Fracture toughness *decreases* with yield strength ($\propto ^{-1}$)
+	- plugus and chugus
+- Why cracks (lol) matter:
+	- High stress concentrations near the crack (small area)
+	- Note how a ductile material can *yield* at the crack tip instead of concentrating stress
+- Crack definition and equations
+	- Radius of curvature is $\rho_{t}$
+	- Length of crack is depends on crack location
+		- *Surface crack* will have a length of $a = L$
+		- *Internal crack* will have a length of $a = \frac{L}{2}$
+	- Stress at a position far removed from the crack is called *nominal* and described by $\sigma_{o} = \frac{F}{A_{o}}$ 
+		- Can also calculate net section stress by considering area at crack level
+	- Maximum stress is $\sigma_{m} = 2\sigma_{o}\sqrt{ \frac{a}{\rho_{t}} }$ 
+	- Stress concentration factor $K_{t} = \frac{\sigma_{m}}{\sigma_{o}} = 2\sqrt{ \frac{a}{\rho_{t}} }$ 
+- Griffith Theory for crack propagation
+	- release of elastic strain energy
+	- propagation happens when that release is *greater* than the energy required to form a new crack (this is Griffith’s theory)
+	- residual energy goes into forming new crack surfaces
+	- equation: $\sigma_{c}=\sqrt{ \frac{2E\gamma_{s}}{\pi a} }$
+		- $\sigma_{c}$ critical stress
+		- $\gamma_{s}$ specific surface energy (?)
+- Charpy Impact Test
+	- High strain rate, low temp, triaxial stress?
+	- Notch on sample
+	- Study on brittle fracture because of crack stress concentration
+### Fatigue
+- Cyclic loading properties
+	- Mean stress: $\sigma_{m}=\frac{\sigma_{\mathrm{max}}+\sigma_{\mathrm{min}}}{2}$
+	- Stress range: $\sigma_{r}=\sigma_{\mathrm{max}}-\sigma_{\mathrm{min}}$
+	- Stress amplitude: $\sigma_{a} = \frac{\sigma_{\mathrm{max}}-\sigma_{\mathrm{min}}}{2}$
+	- Stress ratio: $R = \frac{\sigma_{\mathrm{min}}}{\sigma_{\mathrm{max}}}$
+	- Note how (1) is inversely proportional to (3), higher mean stress means lower stress amplitude
+- S-N curves and interpretation
+	- Defines *fatigue strength* and *fatigure failure*
+	- *Fatigue limit*: Stress amplitude where failure will not occur
+		- Not necessarily exact due to the defects present in all material mentioned in the previous sections
+- Fatigue failure
+	- Cyclic stress $\to$ crack nucleation and growth (but need tensile stress) 
+	- As above, failure occurs when crack grows $> K_{c}$
+	- Cracks start at usual stress concentration points, notches, scratches etc.
+		- Beachmarks (visible) reflect crack propagation (rate)
+		- Striations (micro) reflect load cycles
+	- Occurs when stress is dynamic and/or varying (also below $\sigma_{Y}$)
+	- Usually after *long time* (DIE LIT??) of cyclic stress (see above)
+	- Three stages:
+		1. Initiation
+		2. Propagation
+		3. Final fracture
+- Surface treatment
+	- SHOT-PEENING: 
+		- Shooting hard (read: small metal balls) at a metallic surface inducing residual *compressive* stresses which delay crack mitigation
+		- [?] Why does adding small compressive stresses resist crack formation?
+	- Case hardening:
+		- Harden the surface of a metal object without affecting toughness underneath by exposing the metal to a C/N rich atmosphere at high T creating a layer rich in those components through atomic diffusion
+	- Get rid of stupid edges (fillets)
+### Fracture and DBT (more like BDT)
+- Main definition: 
+	- Drastic reduction in ductility within a temperature range
+		- Observed in some BCC steels, BCC metals and generic ceramics and polymers but NOT on FCC metals (at all)
+- %elongation/temperature graph showcases the DBT temperature, where the ‘S’ curves upward, prior to the DBT it is *brittle* and after it is *ductile*
+- Higher *strain rate* increases the DBTT and temperature range where it is brittle
+- Shoopy impact test:
+	- Conducted at high strain rate (brittle over larger ranges), low T and triaxial stress (meaningless)
+	- Standard notch size
+	- Big hammer slams specimen opposite to notch
+	- Can be understood as a transition in potential energy ($V_{f}- V_0$)
+	- Does not measure any material property
+Key info: ductile fracture $\implies$ dislocation movement while brittle fracture $\implies$ crack propagation
+### Creep
+- Definition:
+	- Creep is *time-dependent* and permanent *deformation* of materials subjected to constant load at elevated temperatures ($T > 0.4T_{m}$)
+- Creep regimes:
+	- Primary:
+		- Continuously decreasing creep rate due to strain hardening (work)
+	- Secondary: Constant creep rate $\varepsilon_{s}$ due to balancing of strain hardening and recovery, lasts the longest
+	- Tertiary: Acceleration of creep rate until rupture
+- Components of creep are $\varepsilon_{E} + \varepsilon_{P}+\varepsilon_{C}$ instantaneous elastic, plastic and time-dependent creep strain
+- Creep curve is proportional to temperature and stress 
+	- Steeper curve means higher stress as $\dot{\varepsilon}_{s}=K_{1}\sigma ^{n}$
+	- With temperature considered: $\dot{\varepsilon}_{s} = K_{2}\sigma ^{n}\exp(-Q/RT)$
+- Larson-Miller parameter
+	- Short term creep experiments require higher temperatures extrapolated 
+	- Extrapolation criteria is $m = T(C +\log(t_{r}))$, graphs usually plot $m-\sigma$
+- Creep resistance:
+	- High melting temperature, elastic modulus and grain size 
+	- Grain boundaries matter at high T because larger grains have less surface area for sliding
+### Corrosion of Metals
+- Environmental degradation is degradation of material properties due to environment exposure
+	- High temperatures
+	- Reduce reactants (water, oxygen)
+	- Corrosion inhibitors?
+- Corrosion is a specific type of above, specifically unchecked electrochemical attack of a metal resulting in its *oxidation*. The result is more chemically stable
+- SKIPPED
+- Driving force is *reduction* of energy to mineral state
+- Process
+	- Electrochemical cell?
+- Stress corrosion:
+	- Crack propagation
+- Galvanic corrosion
+	- Metals or alloys electrically coupled (CONTACT) or exposed to electrolyte (substance that conducts electricity when dissolved, like water)
+	- More reactive metal is *oxidized*, this is the anode, this is what *corrodes* (!!!)
+	- Less reactive metal is *reduced*, this is the cathode
+	- Protection:
+		- Formation of protective oxide
+		- Noble coating
+		- Sacrificial (cathodic) coating
+			- Name is stupid because you’re adding an anode (cathodic because you make the thing you’re *protecting* the cathode, but why is it coating? c’mon now)
+			- Use lower element in galvanic series, will act as the anode $\to$ *corrodes* first
+### Phase Diagrams
+- Phase: homogeneous portion of a system with uniform physical and chemical characteristics
+- Depict only *equilibrium conditions*
+- Binary Isomorphous Systems:
+	- *Binary* $\to$ two elements
+	- *Isomorphous* $\to$ liquid and solid regions have one phase
+	- In between the phase lines (for $T$ and composition) we find a mixed phase $\alpha + L$ 
+	- **Cu-Ni system**
+		- Phases are: $\alpha, L$ 
+- Phase composition
+	- In two phase region with composition $C_{0}$ we draw a horizontal line at temperature of interest, the *tie line* and the two intersections give the phase boundaries $C_{\alpha}$ and $C_{L}$
+- **ANALYSIS:**
+	- Tie line: In two phase regions, allows us to determine the composition of each *phase*, graph overall gives composition *total*
+	- Lever rule:
+		1. Mark intersection of tie line with phase boundaries
+		2. Mass fraction of phase is length of tie line on *opposite* side of the overall composition / overall tie line length
+- Non equilibrium cooling: 
+	- little diffusion in solid, instantaneous in liquid
+	- little compositional changes over time (no diffusion hoe) $\to$ *cored structures*: solid particles have more concentration than other regions
+- Binary Eutectic System (Cu-Ag System):
+	- mixture of chemical compounds that have a *single* chemical composition that solidifies at a lower temperature than all its constituents
+	- Single phase fields
+		- $\alpha -$Cu rich solid
+		- $\beta-$Ag rich solid
+		- Liquid
+	- Mixed phase fields
+		- $\alpha +$liquid
+		- $\beta +$liquid
+		- $\alpha + \beta$ mixed solid
+	- Lines:
+		- $\alpha \setminus \alpha+L :$ *Solidus* line ($\alpha$ or $\beta$)
+		- $L \setminus \alpha + L$: *Liquidus* line ($\alpha$ or $\beta$)
+		- $\alpha \setminus \alpha + \beta$: *Solvus* line
+	- The defining *euctetic point* is the point where the liquidus lines for $\alpha$ and $\beta$ meet. It is the easiest point to go from a solid to a liquid.
+	- Interesting regions:
+		- Entirely in the $\alpha-$phase upon cooling would result in a small $\alpha +L$ region, with complete solidification at the solidus $\to$ characterizes a *polycrystalline* alloy
+		- Crossing the solvus line: Similar changes to above until solvus line, where $\alpha$ solid solubility is exceed, where the region is $\alpha + \beta$ with small $\beta$ particles (composite) $\to$ somewhat *composite alloy*. 
+		- Across the euctetic point: liquid until euctetic temperature, where liquid becomes $\alpha + \beta$ phase (atomic diffusion) $\to$ microstructure of fine alternating layers of $\alpha$ and $\beta$ phases called *lamellae*.
+			- Why? Instant transformation into solid-solid phase can only happen with atomic diffusion over a *short temperature* range and so a small distance range(?).
+		- Compositions passing through the eucectic line but not through the point: 
+			- Lower than the eutectic: *hypoeutectic* $\to$ Eutectic lamellar structure with a primary $\alpha$
+			- Higher than the eutectic: *hypereutectic* $\to$ Eutetic lamellar structure with primary $\beta$
+			- Use *lever rule* to calculate mass fractions + tie line
+- Fe-Fe$_3$C Phase Diagram:
+	- Right boundary $\to$ *cementite* ($\ce{ Fe_{3}C }$) solid line as well (6.7 wt% C)
+	- Eutectoid region $\to$ single-phase solid *austenite* ($\gamma$)
+	- $\alpha$: Ferrite
+	- $\alpha + \gamma:$ 
+	- $\gamma+\ce{ Fe_{3}C }$
+	- $\gamma + L$
+	- $\ce{ Fe_{3}C } + L$
+	- Eutectoid point: transition from $\gamma \to \alpha + \ce{ Fe_{3}C }$ called *pearlite*, lamellar microstructure, in between soft and ductile ferrite and brittle and hard cementite.
+
+### Heat treatment of metals
+- Relieve stresses from dislocations and grain boundaries
+- Manipulates the microstructure $\implies$ material properties
+- *Temperature* and *time* of heat treatment determine the result (TTT diagram)
+- Tempering involves reheating to regain ductility and toughness
+- Quenching and tempering of steel process
+	- Eutectoid = austenite
+	1. Austenitize
+		- Heats to 100% austenite region (held)
+	2. Quench
+		- Splash with water or oil to rapidly cool
+		- Forms non-equilibrium, *hard* microstructures
+		- Isothermal transformation diagram 
+			- For eutectoid steel
+			- % pearlite vs. log(time)
+			- rate of transformation depends on *temperature*
+			- the further from eutectoid isotherm (727) the faster the process (higher transformation rate)
+	3. Temper
+		- Reheat to some intermediary (200-550)
+		- Decreases hardness, regains (some) ductility
+- TTT diagrams (also for quenching)
+	- Time-temperature transformation diagram
+	- From isothermal transformation diagram, extract start, halfway and end time
+	- Repeat for many different temperatures
+- Non-equilibrium microstructures
+	- From austenite *ONLY* (competitive structures = only one possible result unless reheated):
+		- Bainite
+			- Needle-like
+			- “Carbon diffuses into distinct pearlite layers” (?)
+			- Quenching $\to$ fast $\to$ no time for diffusion (slow) resulting in thin needles (of cementite) in a ferrite matrix, instead of lamellae
+			- High cooling rate (quenched to 210-520 C)
+		- Martensite
+			- *Very* rapid cooling, essentially 0 time for diffusion
+			- Supersaturated and unstable
+			- Lattice “stuck” between FCC and BCC (BCT)
+			- Hardest and strongest, most brittle 
+			- Also between 210-520 C
+		- Tempered Martensite
+			- Diffusion governed?
+			- The BCT (ferrite) phase transforms to BCC phase
+			- Fine distribution of cementite particles ($<\mu \ce{ m }$)in ferrite matrix
+			- High hardness still but now greater ductility
+	- From pearlite
+		- Spheroidite (tempered pearlite)
+			- Reheat pearlite to high temperature (< 727 C) for enough time
+			- Cementite layers become dispersion of spheres
+			- Less phase boundary area $\implies$ less strength, more ductility
+			- Spheres are bigger than particles
+### Martensite
+Cooled even more rapidly than bainite, completely diffusionless process. Supersaturated and unstable structure $\to$ lattice stuck between FCC and BCC (BCT). It is the *hardest* and most *brittle* steel microstructure.
+- Spheroidite: Formed by tempering pearlite
+	- Has larger particles than martensite $\implies$ *smaller* phase boundary surface are than martensite $\implies$ spheroidite has higher strength (and more brittle, less ductile) 
+- Ranked by strength (low to high):
+	1. Spheroidite
+	2. Coarse pearlite
+	3. Fine pearlite
+	4. Tempered martensite
+	5. Martensite
+- Ranked by ductility (low to high, opposite of above):
+	1. Martensite
+	2. Tempered martensite
+	3. Fine pearlite
+	4. Coarse pearlite
+	5. Spheroidite
+### Polymers
+- Plastics: synthetic (ish)
+- Natural polymers: Derived from existing biological processes
+- Polymers are differentiated by the repeating unit/backbone chain (*monomers*)
+	- Carbon backbone: C-C bonds 
+- Common side chain effects
+	- Larger (carbon) side groups $\implies$ difficulty in bond rotation (strength+)
+	- Intermolecular interactions
+- Molecular weights:
+	- *Number-average*: Histogram of number of chains at a given interval ($\overline{M_{n}} = \sum x_{i}M_{i}$)
+	- *Weight-average:* Histogram of the total mass of the chains at a given interval ($\overline{M_{w}}=\sum w_{i}M_{i}$)
+	- $\overline{M_{w}}>\overline{M_{n}}$
+- Degree of polymerization (DP): average number of *mer* units in a chain: $DP = n_{n} = \overline{M_{n}}/m$
+	- Higher DP $\implies$ higher melting point, stiffness, strength
+- Polymer branching
+	- Less branching means the molecules pack better and so intermolecular forces are *stronger*
+- Crosslinking
+	- Adjacent linear chains are *strong* 
+	- Achieved by additive atoms/molecules *covalently* bonded to the chains (usually *non*-reversible)
+- Crystallinity
+	- As usual: long-range order in a material
+	- Opposite is amorphous (usually branched)
+		- Covalent bonds to backbone, van der Waals interactions between chains
+	- Polymers are usually semicrystalline
+	- High crystallinity:
+		1. Resistant to softening by heating ($T_{m}$)
+		2. Denser (packing)
+		3. Opaque
+		4. Stronger/stiffer
+		5. Less ductile/more brittle
+	 - Increased crystallinity $\implies$ increase density via packing
+	 - Require sparse side groups, low branching and low random distribution of sidechains (but random mers)
+- Glass transition temperature
+	- Melting point $\iff$ high crystallinity
+	- Point where rigid solid (glass) structure forms (below $T_{m}$)
+- Example: LDPE x HDPE
+	- High Deg. of branching x Low branching (or even linear)
+	- density LDPE < density HDPE
+	- Low crystalline x High crystalline
+	- Flexible, transparent x Semi-flexible (high tensile strength)
+- Most are sensitive to temperature
+- Very varied stress-strain curves
+	- Similarities: 
+		- Elastic deformation $\to$ plastic deformation
+		- Presence of upper yield point and lower yield point
+	 - Differences
+		 - Neck *propagates* through test section
+			 - Why?
+				 - Recall they’re usually *semi*-crystalline
+				 - Amorphous region aligns to form a neck (*conditioning*)
+				 - Conditioning causes *local strengthening* 
+				 - Neck doesn’t elongate further, just other amorphous regions keep necking 
+			- Occurs for non-deformed or polymers with weak intermolecular interactions (chains)
+	 - Uniaxial tensile test can change translucency in polyethylene (crystalline $\to$ amorphous)
+	 - Polymer chains align along tensile axis, can be undone with re-heating.
+- Stages of conditioning
+	 1. Chain folded lamellar structure (amorphous)
+	 2. Inter-lamellar chains elongate (aligned with load)
+	 3. Conditioning begins after continuous elongation of amorphous tie chains
+	 4. Lamellae separate into smaller crystalline segments (smaller crystalline regions connected by chains)
+	 5. Smaller crystalline segments begin to separate as well
+- Drawing
+	- Polymer is strengthened by plastic deformation under tension
+	- Strengthens along axis of loading
+	- Weakens perpendicular to axis of loading
+- Thermoplastics
+	- Soften when heated (more fluid)
+	- Molecular motions overcome intermolecular forces
+	- Rigid when cooled (recyclable) 
+- Thermosets
+	- Cross-linked
+	- Temperature resistant
+- < | > | >? | > | = (<)
+- Elastomers
+	- Can withstand large elastic strains at ambient temperatures
+	- Crosslinking gives more stability
+	- Usually *also* thermosets 
+### Composites
+- Materials with more than one phase present
+	- Formally: Artificially constructed multiphase material constituted by chemically dissimilar phases
+- Ex:
+	- Wood: cellulose fibers (flexible) surrounded by *lignin* (stiffer)
+	- Unreinforced concrete: aggregate particles surrounded by mix of cement and water
+	- GFRP: glass fibers surrounded by polymer matrix
+	- Plywood: wood sheets aligned with grain directions at right angles (glued)
+	- Bone: soft and strong protein collagen and hard and brittle mineral 
+	- Eutectoid steel (pearlite): Ferrite and Cementite
+- Common artificial construction:
+	- The *matrix* phase and the *dispersed or reinforcing* phase
+		 - Particle reinforcing
+		 - Fiber reinforcing
+		 - Structural
+	 - Matrix properties
+		 - Matrix is commonly low density, relatively ductile 
+		 - Matrix must bind to fiber well
+	 - Fiber properties
+		 - High strength (unlikely to have flaws)
+		 - Long chains orient themselves during production leading to strong covalent C—C bonds 
+		 - Carbon fiber high specific modulus and strength, semi-crystalline 
+- Fiber-Reinforced composites
+	- Reinforced phase consisting of *fibers* (duh)
+	- Goal usually high strength-weight ratios
+	- Fibers are stronger than continuous (matrix) phase $\to$ handle most of applied load
+	- Fiber properties affect composite properties the most
+	- Matrix protects fibers from damage/crack creation and propagation (amongst fibers)
+	- Matrix-fiber bond needs to be strong
+	- Fiber length $\propto$ stress carrying capacity
+		- [ ] $l_{c} = {\sigma _{f}d}/{\tau _{c}}$
+		-  $d$ fiber diamater
+		- $\sigma _{f}$ fiber strength in tension
+		- $\tau _{c}$ shear stress in fiber-matrix interface
+		- for continuous fiber, the length must be greater than $15 \times \sigma _{f}d/\tau _{c}$
+	- Fiber orientation
+		- Mat: random
+		- Quasi-isotropic: alternating layers of $0-90^{\circ}$ and $\pm 45^{\circ}$ 
+		- Parallel layer fabric
+		- [ ]  Fibers are stronger when oriented parallel to the load $\implies$ $45^{\circ}$ can handle higher loads before failure (as oppose to a $0-90^{\circ}$ grid)
+- Structural composites
+	- Sandwich
+	- Two stiff, strong outer sheets encase thick layer of less dense, weak and flexible material (commonly honeycomb style) connected by an adhesive layer
+	- Outer material handles compressive and tensile stresses (thick), inner material offers continuous support so must have high shear strength
+	- Stiffness-weight ratio 
+		- Specific modulus: $E/\rho$
+		- Better variation: $E^{1/3}/\rho \propto$ stiffness-weight ratio
+		- $E = 4FL^{3}/\delta wb^{3}$ ($F$ force, $\delta$ deflection, $w$ width, $b$ thickness, $L$ length)
+- Wood
+	- Highly crystalline cellulose fiber cells held together by *lignin*, naturally crosslinked polymer
+	- Highly anisotropic: Strong in longitudinal tension, slightly weaker in longitudinal compression ($\sim 50\%$) and much weaker otherwise
+	- Weak in traverse compression because cellulose-lignin bond is weak
+	- In compression the cellulose cells collapse, increasing hardness and density
+- Long fiber composite materials are *anisotropic* (direction dependent)
+	- $c$ refers to composite, $m$ refers to matrix, $f$ refers to fiber
+	- $V_{m}+V_{f} = 1$ (important)
+	- Isostrain analysis
+		- Fibers oriented parallel to force
+		- Under load: $\varepsilon _{c}=\varepsilon _{m}=\varepsilon _{f}$
+		- Total load: $F_{c} = F_{f} + F_{m}\equiv \sigma _{c}A_{c} = \sigma _{f}A_{f}+\sigma _{m}A_{m}$
+		- Gives: $E_{c} = E_{f}V_{f} + E_{m}V_{m}$ (best case)
+		- $\frac{F_{f}}{F_{m}}=\frac{E_{f}V_{f}}{E_{m}V_{m}}$
+	- Isostress analysis
+		- Fiber oriented perpendicular to force
+		- Load: $\sigma _{c} = \sigma _{m} = \sigma _{f}$
+		- Fibers as *layers* (simpler model)
+		- $E_{c}=\frac{E_{m}E_{f}}{E_{m}V_{f}+E_{f}V_{m}}$ (worst case)
+		- $F_{f}/F_{m} = 1$: Fiber and matrix evenly share load
+	- Compare $E_{c}$ in both cases to determine anisotropic properties
+	- Fiber orientation is done to facilitate fabrication (random fiber orientation beneficial if load application is unknown)
+	- Anisotropic stress-strain graphs
+		- Sketch fiber and matrix phase separately
+		- Fiber is totally brittle (*brittle failure*), matrix is ductile
+		- Line for both follows two stages
+			1. Both fibers and matrix deform elastically (up to matrix $\sigma _{Y}$)
+			2. Matrix undergoes *plastic* deformation (up to fiber brittle failure point)
+		- From 1 $\to$ 2, fibers handle greater proportion of load (IF bond between phases stays)
+
+
+
+#review
