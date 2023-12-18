@@ -1,8 +1,3 @@
----
-sr-due: 2023-12-05
-sr-interval: 1
-sr-ease: 130
----
 This is intended as a companion/summary of the lecture slides, no images means you need to look them up appropriately. Any mistakes are my own.
 ### Chemical bonding
 - Inter-atomic bonding is governed by electron structure
@@ -97,6 +92,116 @@ This is intended as a companion/summary of the lecture slides, no images means y
 	- Values are relative, not absolute $\to$ depend on testing standards used (Rockwell, Brinell)
 - Hardness is useful to estimate $\sigma _{Y}$
 ### Crystal structure
+- DEFINITIONS:
+	- *Crystalline material*:
+		- Atoms arranged in repeating array, with long-range *order*
+	- *Crystal structure:*
+		- Spatial arrangement of atoms in a crystalline material
+		- This determines material properties
+	- *Crystal morphology*:
+		- Shape and size of crystals or grains
+- Unit cell: cube of average crystalline solid $\to$ defines the organization of atoms
+	- Definitions:
+		- Coordination number (CN): number of neighboring atoms 
+		- Close packed direction: Direction with highest linear density (atoms touching)
+		- Atomic packing factor (APF): volume of atoms / volume of unit
+			- Using close packed direction, derive equations for sides of cube $a$ then $APF = \frac{n(4/3\pi R^{3})}{a^3}$
+	- Face centered cubic (FCC)
+		- 4 atoms in unit cell
+		- CN = 12
+		- APF = 0.74
+		- Close packed direction: cube face = $4R$ $\to$ $a= 2\sqrt{ 2 }R$ 
+	- Body centered cubic (BCC)
+		- Self descriptive
+		- 2 (total) atoms
+		- CN = 8
+		- APF = 0.68
+		- Close packed direction: cube diagonal = $4R$ $\to$ allows us to determine volume in APF ($a = \frac{4R}{\sqrt{ 3 }}$)
+	- Hexagonal close packed (HCP): fraud
+		- 6 atoms
+		- CN = 12
+		- APF = 0.74
+		- Close packed along hexagonal face direction
+	- Easy pattern (thanks Daniel): 
+		- BCC|FCC|HCP atoms = 2|4|6
+		- for CN multiply by 4|3|2
+		- APF is 0.68|0.74|0.74 
+	- Theoretical density: $\rho _{Th}$ = mass of atoms in unit cell per volume
+		- $\rho _{Th}=\frac{nA_{i}}{V_{c}N_{A}}$
+		- $N_{A}$ is Avogadro’s
+		- $A_{i}$ is atomic weight in g/mol
+		- Why is there a distinction?
+- Crystallographic directions
+	- Vectors pass through origin, can be translated freely
+	- Directions represented by $[abc]$, $a$, $b$ and $c$ represent directions ($[\boldsymbol{xyz}]$)
+	- E.g.: vector $\frac{a}{2}\boldsymbol{x}+b \boldsymbol{y}+0c \boldsymbol{z}\to \frac{1}{2}\boldsymbol{x}+1\boldsymbol{y}+0\to 1\boldsymbol{x}+2\boldsymbol{y}+0\to [120]$
+	- In the square bracket representation minus signs go on top, i.e. $[2 \overline{1}0]$
+	- Common ones are:
+		- $[111]$: square diagonal
+		- $[110]$: face diagonal
+		- $[100]$: side
+	- This stuff matters because $E$ depends on the crystallographic direction for *anisotropic* materials
+- Planar density: depending on crystallographic direction in the unit cell
+	- Calculation is: $PD = N_{plane}/A_{plane}$
+	- FCC: $1/(4\sqrt{ 2 }R^2)$
+	- BCC: $3/(8\sqrt{ 2 }R^2)$
+- Crystal solidification
+	- Nucleation $\to$ growing grains are oriented differently
+	- Imperfect fits create *grain boundaries* which have high energy (because of disorder $U\propto \Omega$)
+- Crystal Imperfections
+	- Vacancies (gaps)
+	- Interstitial (too grouped together?)
+	- Equilibrium defect concentration obeys $N_{\nu}=N\exp\left( \frac{-Q_{\nu}}{RT} \right)$
+		- $N$: atoms
+		- $N_{\nu}$: number of vacancies per unit volume
+		- $Q_{\nu}$: activation energy to create a vacancy
+		- $R$: BOLTZMANN’s CONSTANT
+- *Diffusion* (IMPORTANT)
+	- Process of atoms moving within a solid — atoms move to vacancies or interstitial atoms move freely $\to$ *require* the existence of defects
+	- Matters for the next modules
+	- Allows atoms to re-arrange to lower energy configurations
+- *Dislocations* (IMPORTANT):
+	- Linear crystalline defects present in all materials, generated during fabrication or formation
+	- Dislocations induce *elastic stress* and *strain fields*
+	- Can only ned a grain boundaries or free surfaces
+	- Dislocation density: $\rho = \ell/V$ (in $[\ce{ m/m^{3} }]$) where $\ell$ is total length of dislocation line and $V$ is volume
+- Plastic deformation — crystal explanation
+	- *Slipping*: movement of dislocations by severing and re-forming of atomic bonds (due to shear stress)
+		- Minimized atomic distortion (?) with dislocation movement
+		- Occurs along plane with *densest atomic packing* (the *slip* plane)
+		- Slip direction has *highest linear density*
+		- Causes slip lines in a crystal
+		- Cause resultant/resolved shear stresses: $\tau _{R}=\sigma \cos \phi \cos\lambda$
+			- $\sigma:$ applied stress
+			- $\phi:$ angle between normal to slip plane
+			- $\lambda:$ angle between slip and stress directions
+		- Slip occurs along plane with maximum resolved shear stress, thus this guides the yield stress:
+			- $\sigma _{Y}=\frac{\tau _{crss}}{\operatorname{max}(\cos \phi \cos\lambda)}
+	- Dislocations move along slip plane causing plastic deformation
+	- Dislocation movement introduces tensile stress below/above slip plane ($\intercal,\boldsymbol{\perp}$)
+### Strengthening of crystals
+- From previous: dislocation motion $\implies$ plastic deformation, thus stronger materials impede dislocation motion
+- Grain size *reduction*:
+	- Grain boundaries *impede* dislocation motion:
+		- because dislocations must change direction and atomic disorder makes slip planes discontinuous
+	- Hall-Petch equation relates yield strength and grain size ($d$, diameter):
+		- $\sigma _{Y}=\sigma _{0}+k_{y}\frac{1}{\sqrt{ d }}$
+		- $\sigma_{0},\,k_{y}:$ material properties
+		- Reveals $\sigma _{Y}\propto ^{-1}d$
+	- Smaller grains $\implies$ larger grain boundary *area* 
+- Solid-Solution strengthening
+	- Mixes of two different types of atoms
+	- *Substitutional solutes*: Alloy atom has similar size to original ones, replacing them in crystal structure
+		- Impose *lattice strain* that impede dislocation motion
+		- Smaller create tensile stresses attracting upper side of dislocation
+		- Larger create compressive stresses attracting lower side of dislocation
+		- Both pin dislocation down, by reducing its strain and requiring more energy to dissociate
+	- *Interstitial solutes*: Alloy atom is smaller and fits into gaps (Steel Fe-C)
+- Work hardening (or cold working)
+	- Below melting point
+	- Up to yielding: $\sigma _{T}=K\varepsilon _{T}^{n}$
+	- Metal becomes stronger as it deforms plastically 
+	- Plastic deformation increases dislocation density $\to$ dislocation-dislocation interactions which difficult dislocation motion (because they’re attractive)
 
 *** 
 ### Recrystallization and grain growth
@@ -371,22 +476,6 @@ Key info: ductile fracture $\implies$ dislocation movement while brittle fractur
 			- Cementite layers become dispersion of spheres
 			- Less phase boundary area $\implies$ less strength, more ductility
 			- Spheres are bigger than particles
-### Martensite
-Cooled even more rapidly than bainite, completely diffusionless process. Supersaturated and unstable structure $\to$ lattice stuck between FCC and BCC (BCT). It is the *hardest* and most *brittle* steel microstructure.
-- Spheroidite: Formed by tempering pearlite
-	- Has larger particles than martensite $\implies$ *smaller* phase boundary surface are than martensite $\implies$ spheroidite has higher strength (and more brittle, less ductile) 
-- Ranked by strength (low to high):
-	1. Spheroidite
-	2. Coarse pearlite
-	3. Fine pearlite
-	4. Tempered martensite
-	5. Martensite
-- Ranked by ductility (low to high, opposite of above):
-	1. Martensite
-	2. Tempered martensite
-	3. Fine pearlite
-	4. Coarse pearlite
-	5. Spheroidite
 ### Polymers
 - Plastics: synthetic (ish)
 - Natural polymers: Derived from existing biological processes
@@ -541,7 +630,3 @@ Cooled even more rapidly than bainite, completely diffusionless process. Supersa
 			1. Both fibers and matrix deform elastically (up to matrix $\sigma _{Y}$)
 			2. Matrix undergoes *plastic* deformation (up to fiber brittle failure point)
 		- From 1 $\to$ 2, fibers handle greater proportion of load (IF bond between phases stays)
-
-
-
-#review
